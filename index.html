@@ -7,34 +7,24 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="maincontroller.js"></script>
 </head>
+<body ng-app="githubUsers" ng-controller="MainController">
 
-<header class="header">
-<h1 class="header__title">Github Users in Nigeria</h1>
-<div class ="navigation">
-<ul class ="navigation__menu">
-  <li class = "navigation__home">Home</li>
-  <li class = "navigation__about">About</li>
-</ul>
-</div>
-</header>
 
-<body>
-  <form class="form">
-  <input type="text" placeholder="search for github users in nigeria" class="search__input">
-  <button class="search__button">Search</button>
-</form>
+  <div class="main" ng-controller="MainController">
 
-  <div class="users">
-    <img src="" alt="the user image" class ="users__img">
-    <div class="users__text">
-    <p class="users__name">Name: Afopefoluwa Ojo</p>
-    <p class="users__biography">Biography: Front-end developer. UI designer.</p>
-    <p class="users__followers">Followers: 1000</p>
-    <p class="users__repositories">Repositories: 4</p>
-    </div>
+  <div ng-include='"header.html"'></div>
+  <div class="ng-view"></div>
+  <div ng-include='"search.html"'></div>
+  <div ng-include='"users.html"'></div>
+  <div ng-include='"footer.html"'></div>
   </div>
-  <footer class="footer">
-    <p>designed by afopefoluwa ojo</p>
-  </footer>
+
+
+
+
 </body>
