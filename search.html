@@ -1,6 +1,18 @@
 <div class="main" ng-controller = "MainController as search">
+  <form class = "form">
   <input type="text" placeholder="Enter a username" class="search__input" ng-model="user.name" name="enter">
-  <button class="search__button" ng-click="search.fetchData(user)">Search</button>
-  <h4 ng-if="search.loading === true">Loading..</h4>
-  <h3>{{search.data}}</h3>
+  <button class="search__button" ng-click="search.fetchData(user)" ng-model="checked">Search</button>
+</form>
+  <h4 ng-if="search.loading === true">Loading...</h4>
+  <div ng-hide="search.data === false">
+    <div class=users__text ng-hide="search.loading === true" ng-model="userstext">
+      <div>
+      <img ng-src="{{search.avatar}}" alt="the user image" class ="users__img"></img>
+    <p class="users__name" ng-hide="checked">Name: {{search.name}}</p>
+    <p class="users__location">Location: {{search.location}}</p>
+    <p class="users__biography">Biography: {{search.bio}}</p>
+    <p class="users__followers">Followers: {{search.followers}}</p>
+    <p class="users__repositories">Public Repositories:{{search.public_repos}}</p>
+  </div>
+</div>
 </div>
