@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="githubUsers">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,19 +12,14 @@
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="maincontroller.js"></script>
 </head>
-<body ng-app="githubUsers">
+<body>
 
 
-  <div class="main" ng-controller="MainController">
+  <div class="main" ng-controller="MainController as search">
 
   <div ng-include='"header.html"'></div>
   <div class="ng-view"></div>
   <div ng-include='"footer.html"'></div>
-  <h4 ng-if="search.loading === true">Loading..</h4>
-  <h3>{{search.data}}</h3>
+  
   </div>
-
-
-
-
-</body ng-controller="githubDataController as search">
+</body>

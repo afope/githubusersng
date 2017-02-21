@@ -1,6 +1,6 @@
-<div class="search" ng-controller="githubDataController as search">
-<form class="form">
-<input type="text" placeholder="Enter a username" class="search__input" ng-model="user.name" name="enter">
-<button class="search__button" ng-click="search.fetchData(user)">Search</button>
-</form>
+<div class="main" ng-controller = "MainController as search">
+  <input type="text" placeholder="Enter a username" class="search__input" ng-model="user.name" name="enter">
+  <button class="search__button" ng-click="search.fetchData(user)">Search</button>
+  <h4 ng-if="search.loading === true">Loading..</h4>
+  <h3>{{search.data}}</h3>
 </div>

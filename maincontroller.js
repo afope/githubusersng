@@ -1,12 +1,4 @@
-app.controller('MainController', ['$scope', function($scope) {
-  $scope.title = 'Github Users in Nigeria';
-}]);
-app.controller('PageCtrl', function ($scope, $location, $http) {
-console.log("Page Controller reporting for duty.");
-
-});
-
-app.controller('githubDataController', function ($http){
+app.controller('MainController', function($http) {
   var search = this;
   search.fetchData = function(user) {
     search.loading = true;
@@ -15,4 +7,8 @@ app.controller('githubDataController', function ($http){
       search.loading = false;
     })
 }
+})
+app.controller('PageCtrl', function ($scope, $location, $http) {
+console.log("Page Controller reporting for duty.");
+
 });
