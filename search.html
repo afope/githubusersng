@@ -8,11 +8,13 @@
     <div class=users__text ng-hide="search.loading === true" ng-model="userstext">
       <div ng-show="search.data === true">
       <img ng-src="{{search.avatar}}" alt="the user image" class ="users__img"></img>
+      <div class ="users__info">
     <p class="users__name">Name: {{search.name}}</p>
     <p class="users__location">Location: {{search.location}}</p>
     <p class="users__biography">Biography: {{search.bio}}</p>
     <p class="users__followers">Followers: {{search.followers}}</p>
     <p class="users__repositories">Public Repositories:{{search.public_repos}}</p>
+  </div>
   </div>
 </div>
 </div>

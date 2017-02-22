@@ -71,27 +71,37 @@
 }
 
 .users{
-  margin-top: 40px;
   margin-left: 50px;
   width: 100%;
   height: 30%;
   font-family: 'Lato', sans-serif;
 }
 .users__img{
-  height:250px;
-  width: 22%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 40%;
+  padding-top: 50px;
   float: left;
-  padding-top: 29px;
-  margin-bottom: 70px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
 }
 
 .users__text{
   float: right;
   width: 77%;
-  padding-top: 12px;
   font-family: 'Lato', sans-serif;
+}
+
+.users__info{
+  float: right;
+  width: 50%;
+  margin-right: 75px;
+  padding-top: 6px;
+}
+
+.users__name{
+  margin-top: 40px;
 }
 .footer{
   margin-top: 30px;
