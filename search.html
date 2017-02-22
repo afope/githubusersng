@@ -6,9 +6,9 @@
   <h4 ng-if="search.loading === true">Loading...</h4>
   <div ng-hide="search.data === false">
     <div class=users__text ng-hide="search.loading === true" ng-model="userstext">
-      <div>
+      <div ng-show="search.data === true">
       <img ng-src="{{search.avatar}}" alt="the user image" class ="users__img"></img>
-    <p class="users__name" ng-hide="checked">Name: {{search.name}}</p>
+    <p class="users__name">Name: {{search.name}}</p>
     <p class="users__location">Location: {{search.location}}</p>
     <p class="users__biography">Biography: {{search.bio}}</p>
     <p class="users__followers">Followers: {{search.followers}}</p>
