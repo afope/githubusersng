@@ -3,7 +3,8 @@ app.controller('MainController', function($http) {
   search.fetchData = function(user) {
     search.loading = true;
     search.data = false;
-    $http.get('https://api.github.com/users/' + user.name).then(function(response){
+    $http.get('https://api.github.com/search/users?location=nigeria&q=' + user.name).then(function(response){
+      console.log(response);
       search.data = true;
       search.name = response.data.name;
       search.location = response.data.location;
