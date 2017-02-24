@@ -7,7 +7,7 @@
   <div ng-hide="search.data === false">
     <div class=users__text ng-hide="search.loading === true" ng-model="userstext" >
       <div ng-show="search.data === true">
-        <div ng-repeat="name in response">
+        <div ng-repeat="x in users">
       <img ng-src="{{search.avatar}}" alt="the user image" class ="users__img"></img>
       <div class ="users__info">
     <p class="users__name">Name: {{search.name}}</p>
