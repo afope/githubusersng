@@ -4,18 +4,15 @@ app.controller('MainController',  ['$scope', '$http', function ($scope, $http) {
     search.loading = true;
     search.data = false;
     $http.get('https://api.github.com/search/users?location=nigeria&q=' + user.name).then(function(response){
-      console.log(response);
+      //console.log(response);
       search.data = true,
-      $scope.userinfo = [
-      search.name = response.data.name,
-      search.location = response.data.location,
-      search.bio = response.data.bio,
-      search.followers = response.data.followers,
-      search.public_repos = response.data.public_repos,
-      search.avatar = response.data.avatar_url,
-      search.loading = false,
-      search.isComplete = false
-    ]
+      search.users = response.data.items;
+      //search.name = response.data.name;
+      //console.log(search.users.login);
+      //console.log(search.name);
+      angular.forEach(search.users, function(value, key){
+     console.log(key + ': ' + value.login);
+});
     })
 }
 }])
