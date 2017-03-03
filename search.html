@@ -3,14 +3,11 @@
   <input type="text" placeholder="Enter a username" class="search__input" ng-model="user.name" name="enter">
   <button class="search__button" ng-click="search.fetchData(user)" ng-model="checked">Search</button>
 </form>
-  <h4 ng-if="search.loading === true" class = "loading">Loading...</h4>
-  <div ng-hide="search.data === false">
-    <div class=users__text ng-hide="search.loading === true" ng-model="userstext" >
-      <div ng-show="search.data === true">
+
+    <div class=users__text ng-model="userstext" >
         <ul ng-repeat="user in search.users track by $index">
-          <li> {{user.login}}</li>
+          <li class="navigation__users"><a ng-href="/{{user.login}}" ng-click="search.fetchData(user)" ng-model="person.login">{{user.login}}</a></li>
         </ul>
 
-</div>
 </div>
 </div>
