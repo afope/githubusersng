@@ -5,9 +5,9 @@
 </form>
 
     <div class=users__text ng-model="userstext" >
-        <ul ng-repeat="user in search.users track by $index">
-          <li class="navigation__users"><a ng-href="/{{user.login}}" ng-click="search.fetchData(user)" ng-model="person.login">{{user.login}}</a></li>
-        </ul>
+        <ul ng-repeat="user in search.users track by $index" ng-if="user.data==true">
+          <li class="navigation__users"><a ng-href="http://localhost:8888/githubusersng/#/{{user.login}}" ng-click = "vm.fetchData(user)" ng-model="user.login">{{user.login}}</a></li>
+        </ul >
 
 </div>
 </div>

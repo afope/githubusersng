@@ -1,12 +1,14 @@
 <div class="user" ng-app="githubUsers">
 <div class ="user-info">
-  <ul ng-controller = "UserCtrl as search">
+  <ul ng-controller = "UserCtrl as vm">
+    <h4 ng-if="vm.loading === true">Loading..</h4>
+
   <li><img src="#" alt="userimage" clas="users__img"></li>
-  <li class = "users__name">Name: {{search.name}}</li>
-  <li class = "users__bio">Bio: {{search.bio}}</li>
-  <li class = "users__bio">Location: {{search.location}}</li>
-  <li class = "users__followers">Followers: {{search.followers}}</li>
-  <li class = "users__repos">Repositories: {{search.repositories}}</li>
+  <li class = "users__name" ng-hide="vm.loading === false">Name: {{vm.name}}</li>
+  <li class = "users__bio">Bio: {{vm.bio}}</li>
+  <li class = "users__bio">Location: {{vm.location}}</li>
+  <li class = "users__followers">Followers: {{vm.followers}}</li>
+  <li class = "users__repos">Repositories: {{vm.repositories}}</li>
 </ul>
 </div>
 </div>
