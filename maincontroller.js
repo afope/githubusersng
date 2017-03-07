@@ -18,18 +18,16 @@ app.controller('PageCtrl', function ($scope, $location, $http) {
 console.log("Page Controller reporting for duty.");
 });
 
-app.controller('UserCtrl',  ['$scope', '$http', function ($scope, $http) {
+app.controller('UserCtrl',  ['$scope', '$http', '$route', function ($scope, $http, $route) {
 
-  var vm = this;
-  vm.data = false;
-  vm.fetchData = function (user) {
-    vm.loading = true;
+  var user = $route.username;
+  console.log(user);
+
     $http.get('https://api.github.com/search/users/' + user.login).then(function(res)
   {
     console.log(res);
-    vm.data = true;
-    vm.name = res.data.name;
-    vm.locatin = res.data.location;
+    person.name = res.data.name;
+    person.location = res.data.location;
   });
-}
+
 }])
