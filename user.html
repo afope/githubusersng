@@ -1,9 +1,7 @@
 <div class="user">
 <div class ="user-info">
   <ul>
-    <h4 ng-if="vm.loading === true">Loading..</h4>
-
-  <li><img src="#" alt="userimage" clas="users__img"></li>
+  <li><img src="#" alt="userimage" clas="users__img" ng-model="user.login"></li>
   <li class = "users__name">Name: {{person.name}}</li>
   <li class = "users__bio">Bio: {{person.bio}}</li>
   <li class = "users__bio">Location: {{person.location}}</li>
