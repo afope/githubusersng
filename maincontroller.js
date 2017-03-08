@@ -30,6 +30,7 @@ app.controller('UserCtrl', ['$scope', '$http', '$routeParams', function ($scope,
     person.followers = res.data.followers;
     person.following = res.data.following;
     person.avatar =  res.data.avatar_url;
+    person.repositories = res.data.public_repos;
 
   });
 }])

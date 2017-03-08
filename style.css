@@ -1,6 +1,6 @@
 
 .header{
-  width: 100%;
+  width: auto;
   height: auto;
   padding: 15px 15px 15px 15px;
   font-family: 'Lato', sans-serif;
@@ -73,7 +73,7 @@
  font-family: 'Lato', sans-serif;
 }
 
-.users{
+.user{
   margin-left: 50px;
   width: 100%;
   height: 30%;
@@ -85,21 +85,17 @@
   float: left;
 }
 
-img{
-  width: 100%;
-  height: 100%;
-}
 
 .users__text{
-  float: right;
-  width: 77%;
+  margin-top: 60px;
   font-family: 'Lato', sans-serif;
+  margin-left: 500px;
+  position: relative;
 }
 
 .users__info{
-  float: right;
-  width: 50%;
-  margin-right: 75px;
+
+margin: 0 auto;
   padding-top: 7px;
   font-family: 'Lato', sans-serif;
 }
@@ -114,11 +110,11 @@ img{
     text-align: center;
     font-size: 10px;
     font-family: 'Lato', sans-serif;
-    position:fixed;
   left:0px;
   bottom:0px;
   height:30px;
   width:100%;
+  margin-top: 200px;
   }
 
 .about__text{
@@ -157,6 +153,10 @@ a:hover{
 text-decoration: none;
 color: #FF7538;
 }
+
+.user__mobile{
+  visibility: hidden;
+}
    @media only screen and (max-width: 500px) {
 
      body {
@@ -167,12 +167,100 @@ color: #FF7538;
             box-sizing: border-box;
 }
 
+img{
+  width: 100%;
+  height: 100%;
+}
+
+.header__title{
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
     .users__img {
-      width: 80%;
+      width: 100%;
       height: auto;
-      height: 250px;
       margin-left: auto;
       margin-right: auto;
-
+      align-items: center;
+      max-width: 300px;
     }
+
+  .users__info {
+    width : 100%;
+    padding: 0;
+  }
+
+.users__text {
+  margin: 0;
+  max-width: 500px;
+  text-align: center;
+  visibility: hidden;
+}
+.user {
+  margin: 0 auto;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+  .user__mobile {
+   visibility: visible;
+  }
+
  }
+
+ @media only screen and (max-width: 760px) {
+
+   body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img{
+width: 100%;
+height: 100%;
+}
+
+.header__title{
+width: auto;
+text-align: center;
+margin: 0 auto;
+
+}
+
+  .users__img {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    max-width: 300px;
+  }
+
+.users__info {
+  width : 100%;
+  padding: 0;
+}
+
+.users__text {
+margin: 0;
+max-width: 500px;
+text-align: center;
+visibility: hidden;
+}
+.user {
+margin: 0 auto;
+margin-top: 0px;
+padding-top: 0px;
+}
+.user__mobile {
+visibility: visible;
+margin-top: 0;
+margin-left: 20px;
+}
+
+}
