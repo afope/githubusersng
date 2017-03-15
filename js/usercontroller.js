@@ -1,4 +1,4 @@
-app.controller('UserCtrl', ['$http', '$routeParams', function ( $http, $routeParams) {
+app.controller('UserCtrl', ['$scope', '$http', '$routeParams', function ( $scope, $http, $routeParams) {
   console.log("User Controller reporting for duty.");
   var person = this;
   var user = $routeParams.username;
@@ -6,8 +6,8 @@ app.controller('UserCtrl', ['$http', '$routeParams', function ( $http, $routePar
     $http.get('https://api.github.com/users/' + user).then(function(res)
   {
     var githubuser = res.data;
-    githubuser.name = res.data.name;
-    console.log(githubuser.name);
+     $scope.githubuser = res.data;
+    console.log($scope.githubuser);
 
   });
 }])
