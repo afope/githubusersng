@@ -1,5 +1,5 @@
-  <div class="main">
-    <form class="form">
+  <div class="main" ng-controller = "MainController as search">
+    <form class="form" >
     <input type="text" placeholder="Enter a username" class="search__input" ng-model="user.name" name="enter">
     <button class="search__button" ng-click="search.fetchData(user)">Search</button>
   </form>
