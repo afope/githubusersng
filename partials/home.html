@@ -1,11 +1,11 @@
-  <div class="main" ng-controller = "MainController as search">
+  <div class="main">
     <form class="form" >
     <input type="text" placeholder="Enter a username" class="search__input" ng-model="user.name" name="enter">
-    <button class="search__button" ng-click="search.fetchData(user)">Search</button>
+    <button class="search__button" ng-click="fetchData(user)">Search</button>
   </form>
 
       <div class=users__text ng-model="userstext">
-          <ul ng-repeat="user in search.users track by $index">
+          <ul ng-repeat="user in users track by $index">
             <li class="navigation__users"><a ng-href="#{{user.login}}">{{user.login}}</a></li>
           </ul>
   </div>
