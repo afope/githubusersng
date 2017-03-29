@@ -1,23 +1,12 @@
 <div class="user">
-   <div class="user-info">
-
-    <div class="users__info">
-      <img ng-src="{{githubuser.avatar_url}}"/>
-        <div class="users__text">
+    <section class="users__info">
+      <img class="users__img" ng-src="{{githubuser.avatar_url}}"/>
+       <div class="users__text">
           <p class="users__name">Name: {{githubuser.name}}</p>
           <p class="users__bio">Bio: {{githubuser.bio}}</p>
           <p class="users__bio">Location: {{githubuser.location}}</p>
           <p class="users__followers">Followers: {{githubuser.followers}}</p>
-          <p class="users__repos">Repositories: {{githubuser.repositories}}</p>
-     </div>
-
-     <div class="user__mobile">
-        <p class="users__name">Name: {{githubuser.name}}</p>
-        <p class="users__bio">Bio: {{githubuser.bio}}</p>
-        <p class="users__bio">Location: {{githubuser.location}}</p>
-        <p class="users__followers">Followers: {{githubuser.followers}}</p>
-        <p class="users__repos">Repositories: {{githubuser.repositories}}</p>
-    </div>
-  </div>
-</div>
+          <p class="users__repos">Repositories: {{githubuser.public_repos}}</p>
+        </div>
+</section>
 </div>
